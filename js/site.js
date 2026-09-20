@@ -1,5 +1,14 @@
 (function () {
   document.documentElement.classList.add("js");
+
+  document.querySelectorAll(".nav-menu").forEach(function (menu) {
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        menu.removeAttribute("open");
+      });
+    });
+  });
+
   var nodes = document.querySelectorAll("[data-reveal]");
   if (!nodes.length) return;
 
