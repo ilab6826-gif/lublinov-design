@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=21">
+  <link rel="stylesheet" href="css/site.css?v=22">
 </head>
 <body>
   <a class="skip" href="#work">К работам</a>
@@ -58,80 +58,81 @@
     <section class="wrap section" id="work">
       <div class="section-head">
         <h2>Работы</h2>
-        <span class="count">08</span>
       </div>
-      <div class="work-grid">
-        <a class="work" href="work/velora.html" data-reveal>
-          <div class="work-top"><span>01</span><span>Концептуальный проект</span></div>
-          <div class="work-media"><img src="assets/velora-cover.webp" alt="Концепт магазина одежды Velora: витрина и карточка товара" width="1280" height="720" fetchpriority="high" decoding="async"></div>
-          <h3>Velora</h3>
-          <p class="work-desc">Интернет-магазин одежды: витрина, товар, лукбук.</p>
-          <p class="work-meta">Website design</p>
-          <span class="work-cta">Смотреть кейс</span>
-        </a>
+      <div class="work-switch">
+        <input class="wf-input" type="radio" name="work-filter" id="wf-all">
+        <input class="wf-input" type="radio" name="work-filter" id="wf-web" checked>
+        <input class="wf-input" type="radio" name="work-filter" id="wf-brand">
+        <div class="wf-tabs" role="group" aria-label="Категории работ">
+          <label class="wf-tab" for="wf-all">All</label>
+          <label class="wf-tab" for="wf-web">Web / UI</label>
+          <label class="wf-tab" for="wf-brand">Branding</label>
+        </div>
+        <div class="work-grid">
+          <a class="work" data-cat="web" href="work/velora.html">
+            <div class="work-media"><img src="assets/velora-cover.webp" alt="Концепт магазина одежды Velora: витрина и карточка товара" width="1280" height="720" fetchpriority="high" decoding="async"></div>
+            <h3>Velora</h3>
+            <p class="work-status">Concept project</p>
+            <p class="work-meta">E-commerce / Website design</p>
+            <span class="work-cta">View case →</span>
+          </a>
 
-        <a class="work" href="work/orbit.html" data-reveal>
-          <div class="work-top"><span>02</span><span>Концептуальный проект</span></div>
-          <div class="work-media"><img src="assets/orbit-cover.webp" alt="Концепт веб-кабинета Orbit: метрики, график и таблица" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <h3>Orbit</h3>
-          <p class="work-desc">Аналитический кабинет: сводка, график, таблица.</p>
-          <p class="work-meta">Website design</p>
-          <span class="work-cta">Смотреть кейс</span>
-        </a>
+          <a class="work" data-cat="web" href="work/orbit.html">
+            <div class="work-media"><img src="assets/orbit-cover.webp" alt="Концепт веб-кабинета Orbit: метрики, график и таблица" width="1280" height="720" loading="lazy" decoding="async"></div>
+            <h3>Orbit</h3>
+            <p class="work-status">Concept project</p>
+            <p class="work-meta">Dashboard / Website design</p>
+            <span class="work-cta">View case →</span>
+          </a>
 
-        <a class="work" href="work/aether.html" data-reveal>
-          <div class="work-top"><span>03</span><span>Концептуальный проект</span></div>
-          <div class="work-media"><img src="assets/aether-cover.webp" alt="Концепт бронирования Aether: список домов и карточка комнаты" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <h3>Aether</h3>
-          <p class="work-desc">Поток бронирования: дома и карточка комнаты.</p>
-          <p class="work-meta">Website design</p>
-          <span class="work-cta">Смотреть кейс</span>
-        </a>
+          <a class="work" data-cat="web" href="work/aether.html">
+            <div class="work-media"><img src="assets/aether-cover.webp" alt="Концепт бронирования Aether: список домов и карточка комнаты" width="1280" height="720" loading="lazy" decoding="async"></div>
+            <h3>Aether</h3>
+            <p class="work-status">Concept project</p>
+            <p class="work-meta">Booking / Website design</p>
+            <span class="work-cta">View case →</span>
+          </a>
 
-        <a class="work" href="work/lumen.html" data-reveal>
-          <div class="work-top"><span>04</span><span>Концептуальный проект</span></div>
-          <div class="work-media"><img src="assets/lumen-cover.webp" alt="Концепт банковского приложения Lumen: счёт и карта" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <h3>Lumen</h3>
-          <p class="work-desc">Банковское приложение: счёт, карта, перевод.</p>
-          <p class="work-meta">Mobile design</p>
-          <span class="work-cta">Смотреть кейс</span>
-        </a>
+          <a class="work" data-cat="web" href="work/lumen.html">
+            <div class="work-media"><img src="assets/lumen-cover.webp" alt="Концепт банковского приложения Lumen: счёт и карта" width="1280" height="720" loading="lazy" decoding="async"></div>
+            <h3>Lumen</h3>
+            <p class="work-status">Concept project</p>
+            <p class="work-meta">Banking / Mobile UI</p>
+            <span class="work-cta">View case →</span>
+          </a>
 
-        <a class="work" href="work/project.html" data-reveal>
-          <div class="work-top"><span>05</span><span>Концептуальный проект</span></div>
-          <div class="work-media"><img src="assets/project-cover.webp" alt="Концепт Mini App PR0JECT: трекер заказа" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <h3>PR0JECT</h3>
-          <p class="work-desc">Трекер заказа в Telegram Mini App.</p>
-          <p class="work-meta">Mobile design</p>
-          <span class="work-cta">Смотреть кейс</span>
-        </a>
+          <a class="work" data-cat="web" href="work/project.html">
+            <div class="work-media"><img src="assets/project-cover.webp" alt="Концепт Mini App PR0JECT: трекер заказа" width="1280" height="720" loading="lazy" decoding="async"></div>
+            <h3>PR0JECT</h3>
+            <p class="work-status">Concept project</p>
+            <p class="work-meta">Mini App / Mobile UI</p>
+            <span class="work-cta">View case →</span>
+          </a>
 
-        <a class="work" href="work/atelier.html" data-reveal>
-          <div class="work-top"><span>06</span><span>Концептуальный проект</span></div>
-          <div class="work-media"><img src="assets/atelier-cover.webp" alt="Концепт айдентики Noir Atelier: имя дома и бумажные носители" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <h3>Noir Atelier</h3>
-          <p class="work-desc">Имя и бумага парфюмерного дома.</p>
-          <p class="work-meta">Branding</p>
-          <span class="work-cta">Смотреть кейс</span>
-        </a>
+          <a class="work" data-cat="brand" href="work/atelier.html">
+            <div class="work-media"><img src="assets/atelier-cover.webp" alt="Концепт айдентики Noir Atelier: имя дома и бумажные носители" width="1280" height="720" loading="lazy" decoding="async"></div>
+            <h3>Noir Atelier</h3>
+            <p class="work-status">Concept project</p>
+            <p class="work-meta">Identity / Branding</p>
+            <span class="work-cta">View case →</span>
+          </a>
 
-        <a class="work" href="work/mv.html" data-reveal>
-          <div class="work-top"><span>07</span><span>Заказ</span></div>
-          <div class="work-media"><img src="assets/mv-cover.webp" alt="Логотип MV Vape Shop на пакете" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <h3>MV Vape Shop</h3>
-          <p class="work-desc">Знак: пакет, карта, вывеска.</p>
-          <p class="work-meta">Branding</p>
-          <span class="work-cta">Смотреть кейс</span>
-        </a>
+          <a class="work" data-cat="brand" href="work/mv.html">
+            <div class="work-media"><img src="assets/mv-cover.webp" alt="Логотип MV Vape Shop на пакете" width="1280" height="720" loading="lazy" decoding="async"></div>
+            <h3>MV Vape Shop</h3>
+            <p class="work-status">Client project</p>
+            <p class="work-meta">Logo / Branding</p>
+            <span class="work-cta">View case →</span>
+          </a>
 
-        <a class="work" href="work/nocturne.html" data-reveal>
-          <div class="work-top"><span>08</span><span>Концептуальный проект</span></div>
-          <div class="work-media"><img src="assets/nocturne-cover.webp" alt="Концепт афиши и билета кинофестиваля Nocturne" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <h3>Nocturne</h3>
-          <p class="work-desc">Афиша и билет кинофестиваля.</p>
-          <p class="work-meta">Branding</p>
-          <span class="work-cta">Смотреть кейс</span>
-        </a>
+          <a class="work" data-cat="brand" href="work/nocturne.html">
+            <div class="work-media"><img src="assets/nocturne-cover.webp" alt="Концепт афиши и билета кинофестиваля Nocturne" width="1280" height="720" loading="lazy" decoding="async"></div>
+            <h3>Nocturne</h3>
+            <p class="work-status">Concept project</p>
+            <p class="work-meta">Poster / Branding</p>
+            <span class="work-cta">View case →</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -229,6 +230,6 @@
     <span>© Lublinov, 2026</span>
     <a href="https://t.me/lublinov_layout" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
   </footer>
-  <script src="js/site.js?v=21" defer></script>
+  <script src="js/site.js?v=22" defer></script>
 </body>
 </html>

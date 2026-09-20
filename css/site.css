@@ -134,8 +134,9 @@ button:focus-visible {
 
 .kicker,
 .status,
-.work-top,
+.work-status,
 .work-meta,
+.wf-tab,
 .meta dt,
 .chapter-num,
 .next small,
@@ -266,6 +267,52 @@ h1 {
 .section-head .count { font-variant-numeric: tabular-nums; }
 .section-head a:hover { color: var(--ink); }
 
+.work-switch { position: relative; }
+
+.wf-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.wf-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: -8px 0 var(--space-4);
+}
+
+.wf-tab {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--muted);
+  transition: color 0.2s var(--ease);
+}
+
+.wf-tab:hover { color: var(--ink); }
+
+#wf-all:checked ~ .wf-tabs [for="wf-all"],
+#wf-web:checked ~ .wf-tabs [for="wf-web"],
+#wf-brand:checked ~ .wf-tabs [for="wf-brand"] {
+  color: var(--ink);
+}
+
+#wf-all:focus-visible ~ .wf-tabs [for="wf-all"],
+#wf-web:focus-visible ~ .wf-tabs [for="wf-web"],
+#wf-brand:focus-visible ~ .wf-tabs [for="wf-brand"] {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+#wf-web:checked ~ .work-grid .work[data-cat="brand"],
+#wf-brand:checked ~ .work-grid .work[data-cat="web"] {
+  display: none;
+}
+
 .work-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -299,20 +346,15 @@ h1 {
 
 .work h3 {
   font-size: clamp(26px, 2.4vw, 34px);
-  margin-top: 14px;
+  margin-top: 16px;
   transition: color 0.2s var(--ease);
 }
 
 .work:hover h3 { color: var(--accent); }
 
-.work-desc {
-  margin-top: 6px;
-  color: var(--ink-soft);
-  font-size: var(--text-md);
-  line-height: 1.45;
-}
+.work-status { margin-top: 8px; }
 
-.work-meta { margin-top: 10px; }
+.work-meta { margin-top: 4px; }
 
 .work-cta {
   display: inline-block;
@@ -326,7 +368,7 @@ h1 {
 
 .work:hover .work-cta { color: var(--ink); }
 
-.case-hero { padding: var(--space-1) 0 0; }
+.case-hero { padding: 0 0 var(--space-2); }
 .case-hero .work-media { aspect-ratio: 16 / 9; }
 
 .case-hero .work-media img {
@@ -584,6 +626,7 @@ h1 {
   .section { padding-bottom: 72px; }
   .contact { padding: var(--space-5) 0 72px; }
   .work-grid { gap: var(--space-4); }
+  .wf-tabs { margin-bottom: var(--space-3); }
   .chapter { gap: 6px; padding: 22px 0; }
   .chapter-num { padding-top: 0; }
   .next {
@@ -593,7 +636,6 @@ h1 {
   .next-next { text-align: left; justify-self: start; }
   .service-item { gap: 4px; }
   .about-hero { padding: var(--space-4) 0 var(--space-2); }
-  .work-top { gap: 8px; flex-wrap: wrap; }
 }
 
 @media (max-width: 720px) {
