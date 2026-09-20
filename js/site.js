@@ -9,10 +9,32 @@
     });
   });
 
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var previews = document.querySelectorAll(".work-media video");
+  if (reduce) {
+    previews.forEach(function (video) {
+      video.removeAttribute("autoplay");
+      video.pause();
+    });
+  } else {
+    document.querySelectorAll(".wf-input").forEach(function (input) {
+      input.addEventListener("change", function () {
+        previews.forEach(function (video) {
+          var card = video.closest(".work");
+          if (!card || window.getComputedStyle(card).display === "none") {
+            video.pause();
+            return;
+          }
+          var play = video.play();
+          if (play && play.catch) play.catch(function () {});
+        });
+      });
+    });
+  }
+
   var nodes = document.querySelectorAll("[data-reveal]");
   if (!nodes.length) return;
 
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduce || !("IntersectionObserver" in window)) {
     nodes.forEach(function (el) { el.classList.add("is-in"); });
     return;
